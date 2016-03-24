@@ -34,6 +34,8 @@ namespace BitonicCountingNetwork
         {
             var output = 0;
 
+            if (_width <= 2) return _layer[0].Traverse();
+
             if (input < _width / 2)
             {
                 output = _half[input % 2].Traverse(input / 2);
