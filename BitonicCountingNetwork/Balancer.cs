@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BitonicCountingNetwork
+﻿namespace BitonicCountingNetwork
 {
     public class Balancer
     {
@@ -12,7 +6,7 @@ namespace BitonicCountingNetwork
 
         private bool _toggle = true;
 
-        public int traverse()
+        public int Traverse()
         {
             lock (_lock)
             {
