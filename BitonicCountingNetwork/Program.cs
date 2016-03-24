@@ -13,9 +13,10 @@ namespace BitonicCountingNetwork
             var bitonic = new Bitonic(width);
             var dict = new ConcurrentDictionary<int, int>();
 
-            Parallel.For(0, 567, (i) =>
+            Parallel.For(0, 100001, (i) =>
             {
-                dict.TryAdd(i, bitonic.Traverse(i % width));
+                var r = new Random();
+                dict.TryAdd(i, bitonic.Traverse(r.Next(4)));
             });
 
             foreach (var kk in dict.Select(p => p)
